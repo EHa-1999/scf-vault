@@ -21,13 +21,20 @@ created: 2026-01-28
 
 ## Wat vind je hier?
 
-Deze map bevat alle **security controls** van het LISA framework, verdeeld over twee categorieën:
+Deze map bevat alle **security controls** van het LISA framework, verdeeld over negen categorieën:
 
 | Categorie | Aantal | Baseline | Beschrijving |
 |-----------|--------|----------|--------------|
-| [[Controls/CIS/_index\|CIS Controls v8]] | 153 | 93 | Center for Internet Security best practices |
-| [[Controls/EXT-P/_index\|Privacy Controls]] | 27 | 27 | Extended privacy controls voor AVG compliance |
-| **Totaal** | **180** | **120** | |
+| [[Controls/CIS/_index\|🛡️ CIS Controls v8]] | 153 | 93 | Center for Internet Security best practices |
+| [[Controls/EXT-P/_index\|🔐 Privacy Controls]] | 27 | 27 | Extended privacy controls voor AVG compliance |
+| [[Controls/EXT-O/_index\|🏢 Organizational]] | 18 | 17 | ISO A.5 governance, beleid, classificatie |
+| [[Controls/EXT-HR/_index\|👥 HR Security]] | 6 | 6 | ISO A.6 + BIO B3 personele beveiliging |
+| [[Controls/EXT-PHY/_index\|🏗️ Physical Security]] | 12 | 11 | ISO A.7 + BIO B7 fysieke beveiliging |
+| [[Controls/EXT-SUP/_index\|🤝 Supplier Mgmt]] | 4 | 4 | BIO B11 + NIS2 supply chain security |
+| [[Controls/EXT-BC/_index\|🔄 Business Continuity]] | 4 | 4 | BIO B12 + NIS2 continuïteit |
+| [[Controls/EXT-COM/_index\|⚖️ Compliance]] | 4 | 4 | BIO B13 wet- en regelgeving |
+| [[Controls/EXT-T/_index\|⚙️ Technical]] | 3 | 2 | ISO A.8 resterende gaps |
+| **Totaal** | **231** | **168** | |
 
 ---
 
@@ -91,6 +98,68 @@ SORT category ASC
 ```
 
 → [[Controls/EXT-P/_index|Bekijk alle Privacy Controls]]
+
+---
+
+## Extended Controls Overzicht
+
+### 🏢 EXT-O: Organizational Controls
+*ISO A.5 gaps — Governance, beleid, classificatie, procedures*
+
+```dataview
+TABLE WITHOUT ID
+  category as "Domein",
+  length(rows) as "Controls",
+  length(filter(rows, (r) => r.baseline = true)) as "Baseline"
+FROM "Controls/EXT-O"
+WHERE type = "control"
+GROUP BY category
+SORT category ASC
+```
+
+→ [[Controls/EXT-O/_index|Bekijk alle Organizational Controls]]
+
+---
+
+### 👥 EXT-HR: HR Security Controls
+*ISO A.6 + BIO B3 — Personele beveiliging*
+
+→ [[Controls/EXT-HR/_index|Bekijk alle HR Security Controls]]
+
+---
+
+### 🏗️ EXT-PHY: Physical Security Controls
+*ISO A.7 + BIO B7 — Fysieke beveiliging*
+
+→ [[Controls/EXT-PHY/_index|Bekijk alle Physical Security Controls]]
+
+---
+
+### 🤝 EXT-SUP: Supplier Management Controls
+*BIO B11 + NIS2 Art.21(2)(d) — Supply chain security*
+
+→ [[Controls/EXT-SUP/_index|Bekijk alle Supplier Controls]]
+
+---
+
+### 🔄 EXT-BC: Business Continuity Controls
+*BIO B12 + NIS2 Art.21(2)(c) — Continuïteit*
+
+→ [[Controls/EXT-BC/_index|Bekijk alle BC Controls]]
+
+---
+
+### ⚖️ EXT-COM: Compliance Controls
+*BIO B13 — Wet- en regelgeving*
+
+→ [[Controls/EXT-COM/_index|Bekijk alle Compliance Controls]]
+
+---
+
+### ⚙️ EXT-T: Technical Controls
+*ISO A.8 resterende gaps*
+
+→ [[Controls/EXT-T/_index|Bekijk alle Technical Controls]]
 
 ---
 

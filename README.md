@@ -120,7 +120,15 @@ SCF-Vault/
 | Frameworks | 6 | NIST CSF, ISO 27001, NIS2, BIO2, AVG, CIS |
 | Security Requirements | 13 | SR-1 t/m SR-13 |
 | CIS Controls | 153 | CIS Controls v8 (93 baseline, 60 niet-baseline) |
-| Privacy Controls | 27 | Extended Privacy Controls (alle baseline) |
+| Privacy Controls (EXT-P) | 27 | Extended Privacy Controls (alle baseline) |
+| Organizational (EXT-O) | 18 | ISO A.5 governance, beleid, classificatie |
+| HR Security (EXT-HR) | 6 | ISO A.6 + BIO B3 personele beveiliging |
+| Physical Security (EXT-PHY) | 12 | ISO A.7 + BIO B7 fysieke beveiliging |
+| Supplier Mgmt (EXT-SUP) | 4 | BIO B11 + NIS2 supply chain security |
+| Business Continuity (EXT-BC) | 4 | BIO B12 + NIS2 continuïteit |
+| Compliance (EXT-COM) | 4 | BIO B13 wet- en regelgeving |
+| Technical (EXT-T) | 3 | ISO A.8 resterende gaps |
+| **Totaal Controls** | **231** | **168 baseline** |
 | Systems | 3 | XENA, ZGW, E-mail Archief |
 | Components | 8 | MinIO, PostgreSQL, KeyCloak, etc. |
 | Dashboards | 7 | Main, Executive, Compliance, Impl, Risk, Audit, **Baseline** |
@@ -162,10 +170,22 @@ Het framework maakt onderscheid tussen **baseline** en **niet-baseline** control
 
 ## Versie
 
-**SCF-Vault v3.0** - Website-style navigatie met Index pagina's  
-Laatste update: 2026-01-28
+**SCF-Vault v3.1** - Extended Controls voor volledige ISO/NIS2/BIO compliance  
+Laatste update: 2026-01-29
 
-### Nieuwe Features v3.0
+### Nieuwe Features v3.1
+
+* **+51 Extended Controls** voor ISO 27001, NIS2 en BIO gaps
+* **EXT-O**: 18 Organizational Controls (ISO A.5)
+* **EXT-HR**: 6 HR Security Controls (ISO A.6, BIO B3)
+* **EXT-PHY**: 12 Physical Security Controls (ISO A.7, BIO B7)
+* **EXT-SUP**: 4 Supplier Management Controls (BIO B11, NIS2)
+* **EXT-BC**: 4 Business Continuity Controls (BIO B12, NIS2)
+* **EXT-COM**: 4 Compliance Controls (BIO B13)
+* **EXT-T**: 3 Technical Controls (ISO A.8)
+* Framework coverage: ISO 95%+, NIS2 100%, BIO 95%+
+
+### Features v3.0
 - **Index pagina's (_index.md)** voor elke map
 - **Vault-Navigation.svg** interactief navigatiediagram
 - Website-achtige navigatie door de hiërarchie
